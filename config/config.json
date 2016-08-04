@@ -1,0 +1,8 @@
+{
+    "production" : {
+        "url" : "http://prodUrl:prodPort"
+    },
+    "development" : {
+       "apiServerUrl" : "http://devUrl:devPort"
+    }
+}
