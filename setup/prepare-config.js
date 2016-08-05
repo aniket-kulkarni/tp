@@ -1,5 +1,5 @@
 var yargs = require('yargs').argv;
-var config = require('../config/config.json');
+var config = require('../config/env-config.json');
 var colors = require('colors');
 var fs = require('fs');
 const path = require('path');
