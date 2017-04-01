@@ -1,0 +1,124 @@
+@import "../../styles/config.css";
+
+.root {
+    display : flex;
+    flex-direction: column;
+    height : 100%;
+}
+
+.header {
+    height : 80px;
+    background: var(--gradientBackground);
+    background: var(--gradientBackgroundWebkit);
+    background: var(--gradientBackgroundLinear);
+
+    display : flex;
+    flex-direction: column;
+    flex-shrink : 0;
+}
+
+.centerWrappedJustifiedBetween {
+    display : flex;
+    flex-grow : 1;
+    align-items : center;
+    justify-content : space-between;
+    width : 62.5%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+@media (max-width: 1100px) {
+    .centerWrappedJustifiedBetween {
+        width : 75%;    
+    }
+}
+
+.headerWrap {
+   composes : centerWrappedJustifiedBetween;
+}
+
+.controlsSection {
+    height : 75px;
+    background-color : #f2f2f6;
+    box-shadow : 3px 0px 5px #888888;
+    flex-shrink : 0;
+    display : flex;
+    flex-direction: column;
+}
+
+.noProjects {
+    font-size: 16px;
+    margin: 40px 0 0 30px;
+    height: 60px;
+    width: 699px;
+    background: rgb(230, 230, 235);
+    align-items: center;
+    display: flex;
+    padding-left: 30px;
+    font-style: italic;
+    border-radius: 5px;
+}
+
+.controlsWrap {
+    composes : centerWrappedJustifiedBetween;
+}
+
+.projectsSection {
+    flex-grow : 1;
+}
+
+
+.logoWrap {
+    font-size : 20px;
+    color : whitesmoke;
+}
+
+.filter {
+    font-size : 18px;
+    margin-right : 30px;
+    color : rgba(10,13,25,0.35);
+    cursor : pointer;
+}
+
+.filter.selected {
+    color : black;
+    cursor: auto;
+}
+
+.projectControls {
+    display : flex;
+}
+
+.projectList {
+    display : flex;
+    margin-top : 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width : var(--dashboardWrapWidth);
+    flex-wrap : wrap;
+}
+
+.projectItem {
+    margin-right : 40px;
+    margin-bottom : 40px;
+    cursor: pointer;
+}
+
+.itemName {
+    margin-top : 8px;
+    margin-left : 3px;
+    font-size : 14px;
+}
+
+.itemCover {
+    padding: 4px 4px 0px 4px; 
+}
+
+.projectItem:hover .itemCover {
+    box-shadow: 0 0 0 2px #009bb7,0 0 2px 4px rgba(0,155,183,0.15);
+    border-radius: 3px;
+}
+
+.projectItem:hover .itemName {
+    color : #007d99;
+}

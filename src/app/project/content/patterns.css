@@ -1,0 +1,87 @@
+@import "../../../styles/config.css";
+
+.root {
+    width : var(--patternsWidth);
+    display: flex;
+    flex-direction: column;
+}
+
+:global(.reviewMode) .root {
+    display : none;
+}
+
+
+.header {
+    display : flex;
+    background-color : #f3f3f6;
+    height : var(--headerHeight);
+    flex-shrink : 0;
+    box-shadow : inset 0 1px 0 rgba(255,255,255,0.6),inset 0 -1px 0 rgba(0,0,0,0.12),0 1px 0 rgba(10,13,25,0.02);
+    align-items : center;
+    padding-left:20px;
+}
+
+.content {
+    flex-grow : 1;
+    overflow-y: auto;
+    background-color : #e7e7eb;
+}
+
+.patternsWrap {}
+.patternGroup {}
+.groupName {
+    padding: 0 15px;
+    background-color: rgba(255,255,255,0.18);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6),inset 0 -1px 0 rgba(10,13,25,0.12),0 1px 0 rgba(10,13,25,0.02);
+    border-top: 1px solid rgba(10,13,25,0.15);
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 28px;
+    margin-bottom: 0;
+    height: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.patternList {
+    padding : 0 0 0 10px;
+    display : flex;
+    flex-wrap : wrap;
+}
+
+.patternItem {   
+    cursor : grab;
+    cursor: -webkit-grab;
+    user-select: none;
+    -webkit-user-select: none;
+    padding: 10px;
+    height: 110px;
+    width: 80px;
+    margin: 5px 5px 0 0;
+    border-radius: 2px;
+    position: relative;
+    transition: background 100ms ease-in-out;
+    box-sizing: border-box;
+}
+
+.patternItem:hover {
+    background-color: rgba(255,255,255,0.82);
+    box-shadow: inset 0 1px 0 0 #fff,0 0 2px 1px rgba(10,13,25,0.13);
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+    background-size: 35px 35px;
+    margin: 12px 17px 8px 10px;
+    opacity: 0.8;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNSIgaGVpZ2h0PSIzNSI+PGcgZmlsbD0iIzAwN0Q5OSI+PHJlY3QgeD0iMjAiIHk9IjQiIHdpZHRoPSIzIiBoZWlnaHQ9IjI1Ii8+PHBhdGggZD0iTTE2LjgxNyA0Yy01LjExMSAwLTguOTI2IDIuMjc5LTguOTI2IDguMDk0IDAgNS41MTQgMy44NTQgOC4xNjcgOS4xMDkgOC4yMzV2LTE2LjMyOWgtLjE4M3oiLz48L2c+PC9zdmc+') no-repeat;
+}
+
+.patternTitle {
+    text-align:center;
+    font-size: 12px;
+    line-height: 14px;
+    height: 42px;
+    color: black;
+}

@@ -1,0 +1,19 @@
+@import "../../../styles/config.css";
+
+.root {
+    flex-grow : 1;
+    display : flex;
+}
+
+.nav {
+    width:250px;
+    flex-shrink:0;
+    background-color : var(--darkGrey);
+    box-sizing : border-box;
+    padding : 20px 15px;
+}
+
+.content {
+    background-color : var(--lightGrey);
+    flex-grow:1;
+}

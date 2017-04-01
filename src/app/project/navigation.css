@@ -1,0 +1,86 @@
+@import "../../styles/config.css";
+
+.root {
+    height : var(--navbarHeight);
+    flex-shrink: 0;
+}
+
+.root > header {
+    background-color : #3b3d47;
+    height : 100%;
+    display : flex;
+    align-items : center;
+}
+
+.navItems {
+    margin : 0;
+    padding : 0;
+    display : flex;
+}
+
+.navItem {
+	margin-top: 4px;
+    cursor: pointer;
+}
+
+.navItem > a {
+    padding: 0 15px;
+}
+
+.projectDetails {
+    flex-grow: 1;
+    display : flex;
+    align-items : center;
+    color : white;
+    margin-left : 12px;
+}
+.projectCover > img {
+    width : 20px;
+}
+
+.projectInfo {
+    margin-left : 10px;
+    font-size : 12px;
+}
+
+.userAccount {
+    margin-right: 5px;
+}
+
+.seperator {
+    position : relative;
+}
+
+.seperator:after {
+    content : "";
+    width: 1px;
+    background-color : rgba(255,255,255,0.05);
+    position : absolute;
+    top : 0;
+    bottom : 0;
+    right : -1px;
+}
+
+.seperator:before {
+    content : "";
+    width: 1px;
+    background-color : rgba(10,13,25,0.4);
+    position : absolute;
+    top : 0;
+    bottom : 0;
+    right : 0;
+}
+
+.navButtons {
+    padding : 0 20px;
+}
+
+.saveWrapper {
+    opacity : 1;
+    pointer-events : auto;
+}
+
+.dull {
+    opacity : 0.3;
+    pointer-events : none;
+}

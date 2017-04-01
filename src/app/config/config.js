@@ -1,4 +1,2 @@
-/*eslint-disable quotes*/
-
-var config = {"apiServerUrl":"http://devUrl:devPort"};
+var config = {"apiServerUrl":"http://localhost:3001"};
 module.exports = config;

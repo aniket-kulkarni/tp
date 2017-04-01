@@ -1,0 +1,38 @@
+
+.searchInput {
+    background-color: #c1c2cd;
+    width : 300px;
+    height : 34px;
+    border-radius : 3px;
+    border : none;
+    box-sizing : border-box;
+    padding-left : 30px;
+    color : white;
+    font-size : 14px;
+}
+
+.searchInput:focus {
+    outline : none;
+}
+
+.searchBar {
+    position : relative;
+    margin-right : 15px;
+    margin-top : 1px;
+}
+
+.searchInput::-webkit-input-placeholder {
+   color: white;
+}
+
+.searchInput:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+}
+
+.searchInput::-moz-placeholder {  /* Firefox 19+ */
+   color: white;  
+}
+
+.searchInput:-ms-input-placeholder {  
+   color: white;  
+}

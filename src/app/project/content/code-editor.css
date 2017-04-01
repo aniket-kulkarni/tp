@@ -1,0 +1,53 @@
+@import "../../../styles/config.css";
+
+.root {
+    width : var(--codeEditorWidth);
+    display: flex;
+    flex-direction: column;
+}
+
+:global(.reviewMode) .root {
+    display : none;
+}
+
+.header {
+    display : flex;
+    background-color : var(--editorBackground);
+    border-bottom: 2px solid #131111;
+    color : white;
+    height : calc(var(--headerHeight) - 2px);
+    flex-shrink : 0;
+    align-items : center;
+    padding-left:20px;
+}
+
+.content {
+    display : flex;
+    flex-grow : 1;
+    overflow-y: auto;
+}
+
+.editor {
+    width : 100%;
+    background-color : var(--editorBackground);
+    overflow-y: auto;
+}
+
+:global(.CodeMirror) {
+    height : auto !important;
+    overflow : hidden;
+}
+
+.close {
+    margin-right : 10px;
+}
+
+.title {
+    flex-grow:1;
+}
+
+.closeFontIcon {
+    font-size : 18px !important;
+    margin-top : 4px;
+    cursor : pointer;
+}

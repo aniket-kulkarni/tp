@@ -1,0 +1,27 @@
+@import "../../../styles/config.css";
+
+.root {
+    width:250px;
+    flex-shrink:0;
+    background-color:#e7e7eb;
+}
+
+.header {
+    height : var(--headerHeight);
+    box-sizing : border-box;
+    padding : 0 15px;
+    display : flex;
+    align-items:center;
+    background-color:rgba(255,255,255,0.18);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6),inset 0 -1px 0 rgba(10,13,25,0.12),0 1px 0 rgba(10,13,25,0.02);
+}
+
+.title {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 28px;
+}
+
+.content {
+    padding-top : 10px;
+}

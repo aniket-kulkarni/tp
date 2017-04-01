@@ -1,0 +1,216 @@
+@import "../../../styles/config.css";
+
+.root {
+    flex-grow : 1;
+    background-color : var(--lightGrey);
+    display : flex;
+    color: #333;
+}
+
+.content {
+    flex-grow:1;
+    padding: 25px 0 0 30px; 
+}
+
+.sidebar {
+    flex-shrink: 0;
+    width : 250px;
+    background : #e7e7eb;
+    display : flex;
+    flex-direction : column;
+}
+
+.main {
+    margin-top: 30px;
+}
+
+.chapterToggle {
+    width: 0; 
+    height: 0; 
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #9E9E9E;
+    transition : transform 120ms ease-in-out;
+    cursor : pointer;
+}
+
+.chapterItem {
+    padding-bottom : 25px;
+}
+
+.fileItem {
+    padding : 17px 0px 17px 31px;
+}
+
+.chapterItem.toggled .chapterToggle {
+    transform: rotate(-90deg);
+}
+
+.chapterItem.toggled .fileList {
+    display : none;
+}
+
+.chaptersList.toggled .chapterToggle {
+    transform: rotate(-90deg);
+}
+
+.chaptersList.toggled .fileList {
+    display : none;
+}
+
+.chapterHeading {
+    display : flex;
+    align-items : center;
+}
+.file {
+    margin-top:10px;
+}
+
+.chapterToggle {
+    margin-right : 10px;
+}
+
+.fileIcon {
+    margin-right : 6px;
+    position: relative;
+    top : 2px;
+}
+
+.chaptersList {
+    padding : 0;
+    font-size : 14px;
+}
+
+.header {
+    font-size:24px;
+}
+
+.editStructure,.editChapter,.editFile {
+    display : flex;
+    flex-direction : column;
+}
+
+.content, .editStructure {
+    user-select: none;
+}
+
+.sidebarHeader {
+    border-bottom: 1px solid rgba(10,13,25,0.1);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.3);
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 600;
+    height: 40px;
+    line-height: 26px;
+    padding: 7px 15px;
+    display : flex;
+}
+
+.sidebarHeader > h4 {
+    margin : 0;
+    flex-grow : 1;
+}
+
+.drawerText {
+    line-height : 21px;
+}
+
+.drawerWrap {
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+.drawerList {
+    padding-left: 15px;
+    margin-top: 25px;
+}
+
+.drawerItem {
+    margin-bottom : 15px;
+    display : flex;
+    align-items: center;
+    cursor : -moz-grab;
+    cursor : -webkit-grab;
+}
+
+.drawerIcon {
+    margin-right : 10px;
+}
+
+.chapterFiles {
+    padding-left : 30px;
+}
+
+.chapterDrawPoint {
+    height : 0;
+    width : 32px;
+    border : none;
+    transition: height 150ms ease-in-out;
+}
+
+.chapterDrawPoint.active {
+    margin : 10px 0;
+    height : 30px;
+    border: 2px solid #0288D1;
+    border-right: none;
+    border-top: none;
+}
+
+.fileDrawPoint {
+    height : 0;
+    position: relative;
+    transition: height 150ms ease-in-out;
+}
+
+.fileDrawPoint.active {
+    height : 30px;
+}
+.fileDrawPoint.active:before {
+    content: " ";
+    border-left: 2px solid #0288D1;
+    border-bottom: 2px solid #0288D1;
+    position: absolute;
+    top: 0;
+    left: 32px;
+    width : 30px;
+    height: 100%;
+}
+
+.chapterItem {
+
+}
+
+.chapterTitle,.fileTitle {
+    display: inline-block;
+    width: 90%;
+    min-height: 30px;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor : pointer;
+}
+
+.chapterTitle:hover {
+    border-radius: 2px;
+    background-color: rgba(255,255,255,0.82);
+    box-shadow: inset 0 1px 0 0 #fff,0 0 2px 1px rgba(10,13,25,0.13);
+}
+
+.selectedChapter,.selectedFile {
+    background-color : #CAEDF7 !important;
+}
+
+.chapterMetaEdit,.fileMetaEdit {
+    padding: 0 15px;
+}
+.chapterActions,.fileActions {
+    margin-top : 15px;
+    padding: 0 15px;
+}
+
+.deletedChapter,.deletedFile,.deletedChapter .fileTitle {
+    text-decoration : line-through;
+}
+
+.close {
+    cursor : pointer;
+}

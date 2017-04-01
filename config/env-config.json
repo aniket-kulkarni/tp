@@ -3,6 +3,6 @@
         "url" : "http://prodUrl:prodPort"
     },
     "development" : {
-       "apiServerUrl" : "http://devUrl:devPort"
+       "apiServerUrl" : "http://52.210.210.96:3001"
     }
 }

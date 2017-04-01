@@ -62,12 +62,26 @@
     "yargs": "^4.8.1"
   },
   "dependencies": {
-    "formsy-material-ui": "^0.5.0",
-    "formsy-react": "^0.18.1",
-    "material-ui": "^0.15.3",
-    "react": "^15.0.1",
-    "react-dom": "^15.0.1",
-    "react-router": "^2.6.1",
-    "react-tap-event-plugin": "^1.0.0"
+    "alt": "^0.18.2",
+    "classnames": "^2.2.3",
+    "codemirror": "^5.14.2",
+    "csslint": "^0.10.0",
+    "formsy-material-ui": "^0.3.8",
+    "formsy-react": "^0.17.0",
+    "htmlhint": "^0.9.13",
+    "jquery": "^2.2.3",
+    "js-beautify": "^1.6.2",
+    "material-ui": "^0.14.4",
+    "moment": "^2.13.0",
+    "react": "^0.14.6",
+    "react-addons-update": "^0.14.8",
+    "react-dom": "^0.14.6",
+    "react-router": "^2.4.1",
+    "react-select": "^0.9.1",
+    "react-tap-event-plugin": "^0.2.2",
+    "react-treebeard": "^1.1.1",
+    "react-utils": "^1.0.0",
+    "shortid": "^2.2.6",
+    "velocity-react": "^1.1.4"
   }
 }

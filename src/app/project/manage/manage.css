@@ -1,0 +1,105 @@
+@import "../../../styles/config.css";
+
+.root {
+    display : flex;
+    flex-grow : 1;
+}
+.nav {
+    width : 250px;
+    flex-shrink: 0;
+    background-color : var(--darkGrey);
+    box-sizing : border-box;
+    padding : 20px 15px;
+}
+
+.navItem {
+    display : flex;
+    align-items : center;
+    height : 40px;
+    color : #333;
+    padding-left : 10px;
+    cursor : pointer;
+}
+
+.navItem.selected {
+    background-color : #caedf7;
+    box-shadow: inset 0 0 0 1px rgba(0,125,153,0.4),inset 0px 0px 5px rgba(0,125,153,0.7),0 1px 0 rgba(255,255,255,0.4);
+    cursor : auto;
+}
+
+.main {
+    flex-grow : 1;
+    background-color : var(--lightGrey);
+    display : flex;
+    justify-content : center;
+}
+
+.mainContent {
+    margin-top : 120px;
+}
+
+.mainContent header {
+    font-size : 20px;
+    color : rgba(0,0,0,0.85);
+}
+
+.memberListTableWrap > table {
+    border-collapse : collapse;
+    font-size : 14px;
+}
+
+.memeberList th {
+    color : #999;
+}
+
+.memeberList td {
+    color : rgba(0,0,0,0.9);
+}
+
+.memeberList th {
+    vertical-align : middle;
+    text-align : left;
+    font-weight : normal;
+    padding : 12px 100px 12px 0;
+}
+
+.memeberList td {
+    vertical-align : middle;
+    text-align : left;
+    font-weight : normal;
+    padding : 12px 100px 12px 0;
+}
+
+.memeberList tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.memeberList tbody tr:last-child {
+    border-bottom: none;
+}
+
+.newMemberMeta {
+    margin-top : -3px;
+    font-size : 12px;
+}
+
+.submitWrap {
+    display : flex;
+    justify-content : flex-end;
+}
+
+.newMemberWrap {
+    margin-top : 50px;
+}
+
+.newMemberFormWrap {
+    margin-top : 20px;
+    max-width : 1200px;
+}
+
+.memberListTableWrap {
+    max-height: 220px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 30px;
+}

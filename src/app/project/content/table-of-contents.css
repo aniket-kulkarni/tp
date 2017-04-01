@@ -1,0 +1,61 @@
+@import "../../../styles/config.css";
+
+.root {
+    width : var(--tableOfContentsWidth);
+    display: flex;
+    flex-direction: column;
+    background: #E6E6EB;
+    transition: all 0.25s ease;
+    border-right: 1px solid #C4C4CB;
+}
+
+.header {
+    display : flex;
+    flex-direction: row;
+    box-shadow :inset 0 -2px 0 rgba(0,0,0,0.3),0 0px 0 rgba(10,13,25,0.02);
+    height : var(--headerHeight);
+    align-items : center;
+    background-color : rgba(255,255,255,0.3);
+    padding-left : 7px;
+    flex-shrink  : 0;
+}
+
+.content {
+    flex-grow : 1;
+    overflow-y: auto;
+}
+
+.title {
+    font-size: 15px;
+    color: rgba(0,0,0,0.8);
+    margin-left: 10px;
+}
+
+.close {
+    margin-top: -4px;
+}
+
+
+.listFontIcon {
+    margin-top: 7px;
+    cursor: pointer;
+    cursor: pointer;
+}
+
+.issueCount {
+    display: inline-block;
+    height: 27px;
+    margin: 0 5px;
+    background: #5EB049;
+    width: 16px;
+    border-radius: 3px;
+    text-align: center;
+}
+.issueCountWrap{
+    display:inline-block;
+    margin-left:30px;
+}
+
+:global(.editMode) .issueCountWrap {
+    display : none;
+}

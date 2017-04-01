@@ -1,0 +1,57 @@
+.root {
+    height : 100%;
+    display:flex;
+}
+
+.tableOfContent {
+    width : 250px;
+    flex-shrink:0;
+    background : #2c272c;
+}
+
+.frameContainer {
+    box-sizing: border-box;
+    background : rgb(220, 220, 225);
+    flex-grow : 1;
+    padding-top : 20px;
+    padding-bottom : 20px;
+    overflow: auto;
+}
+
+.frameContainer > iframe {
+    border: none;
+    display : block;
+    margin-bottom : 20px;
+    margin-left : auto;
+    margin-right : auto;
+    width:60%;
+    background:white;
+}
+
+.frameContainer > iframe:last-child {
+    margin-bottom : 0px;
+}
+
+.invalidPin {
+    color: red;
+    font-size: 12px;
+    position: relative;
+    top: -6px;
+}
+
+@media only screen and (max-width : 600px) {
+
+    .tableOfContent {
+        display : none;
+    }
+}
+
+@media only screen and (max-width : 1000px) {
+    .frameContainer > iframe {
+        width : 85%;
+    }
+
+    .tableOfContent {
+        width : 150px;
+    }
+}

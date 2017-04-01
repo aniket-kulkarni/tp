@@ -1,0 +1,17 @@
+.root {
+    height : 100%;
+    background: #3CA55C;
+    background: -webkit-linear-gradient(to left, #3CA55C , #B5AC49);
+    background: linear-gradient(to left, #3CA55C , #B5AC49);
+}
+
+.viewRoot {
+    display : flex;
+    justify-content : center;
+}
+
+.viewRoot > form {
+    margin-top : 150px;
+    margin-left: -3%;
+}
+

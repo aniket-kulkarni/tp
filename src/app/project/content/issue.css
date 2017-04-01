@@ -1,0 +1,101 @@
+@import "../../../styles/config.css";
+
+.root {
+    position: absolute;
+}
+
+.issueWrap {
+    width : 250px;
+    border-width : 2px;
+    border-style : solid;
+}
+
+.header {
+    background: linear-gradient(#fff, #eee);
+    display : flex;
+}
+
+.draggable {
+    flex-grow : 1;
+    cursor: move;
+}
+
+.footer {
+    background:#eee;
+}
+
+.comments {
+    background:white;
+}
+
+.editComment {
+    line-height: 16px;
+    color: #444;
+    overflow: auto;
+    width: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+    resize: none;
+    font-size: 13px;
+    outline : none;
+}
+
+.editCommentWrap {
+    background : #f5f5f5;
+    padding : 5px;
+}
+
+.editCommentActions {
+    padding: 3px 8px 3px;
+    line-height: 1;
+    font-size: 12px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 2px;
+    margin-left:4px;
+    border:none;
+    cursor:pointer;
+}
+.editCommentActionsWrap {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.editCommentActions:hover {
+    background : black;
+}
+
+.commentTextWrap {
+    font-size : 13px;
+    padding:5px 6px;
+}
+
+.commentAuthor {
+    margin-right : 3px;
+    font-weight  :600;
+}
+
+.minimized .issueWrap {
+    display:none;
+}
+
+.commentIcon {
+    cursor:pointer;
+}
+
+.edit .commentIcon,.edit .minimize {
+    cursor:auto;
+}
+
+.headerIcon {
+    height: 100%;
+    border-right: 1px solid #E0E0E0;
+    cursor:pointer;
+}
+
+.commentMetadata {
+    display : block;
+    font-size : 11px;
+}

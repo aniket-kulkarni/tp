@@ -1,6 +1,6 @@
 var React = require('react');
 
-class View2 extends React.Component {
+class Setup extends React.Component {
 
     constructor(props) {
         super(props);
@@ -12,11 +12,11 @@ class View2 extends React.Component {
     render() {
         return (
             <div className="root">
-                I am View2
+                I am Setup
             </div>
         );
     }
 
 }
 
-module.exports = View2;
+module.exports = Setup;

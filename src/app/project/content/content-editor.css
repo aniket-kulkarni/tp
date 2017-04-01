@@ -1,0 +1,296 @@
+@import "../../../styles/config.css";
+
+
+:root {
+    --frameWidth : 650px;
+}
+.root {
+    width : var(--contentEditorWidth);
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    background: #F2F2F6;
+    transition: all 0.25s ease;
+    border-right: 1px solid #C4C4CB;
+}
+
+:global(.issueDrag) .frameContainer > iframe {
+    pointer-events : none;
+}
+
+.header {
+    display : flex;
+    flex-direction: row;
+    box-shadow :inset 0 -2px 0 rgba(0,0,0,0.3),0 0px 0 rgba(10,13,25,0.02);
+    height : var(--headerHeight);
+    color : rgba(0,0,0,0.8);
+    padding-left : 7px;
+    flex-shrink  : 0;
+    align-items : center;
+}
+
+.content {
+    flex-grow : 1;
+    overflow-y: auto;
+}
+
+.frameContainer {
+    position: relative;
+}
+
+.frameWrap {
+    position: relative;
+    display : flex;
+    justify-content : center;
+    padding-top: 100px;   
+    padding-bottom : 50px;
+}
+
+.frameWidth {
+    width : 650px;
+}
+
+.frameContainer > iframe {
+    width : var(--frameWidth);
+    min-height: 500px;
+    border: none;
+    box-shadow : 0 1px 3px rgba(0,0,0,0.35);
+    background-color : white;
+    position: relative;
+}
+
+.framePos {
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+    margin-top:100px;
+}
+
+.commentsWrap {
+    composes: framePos;
+    top : 0;
+    width : var(--frameWidth);
+}
+
+.highlighter {
+    position: absolute;
+    left : 0;
+    top : 0;
+    width : 2px;
+    height : 2px;
+    background : green;
+    pointer-events : none;
+}
+
+.linkOverlay {
+    position: absolute;
+    left : 0;
+    transform: translateY(100%);
+    opacity : 0;
+    display : flex;
+    visibility : hidden;
+}
+
+.linkOverlay.active {
+    opacity : 1;
+    visibility : visible;
+}
+
+.linkOverlayWrap {
+    display : flex;
+    background-color : #00779F;
+    color : white;
+    border-radius: 2px;
+    padding: 7px 10px;
+    font-size: 13px;
+}
+
+.overlayPointer {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    top: -6px;
+    position: absolute;
+    transform: translateX(-6px);
+}
+
+.linkOverlayPointer {
+    composes : overlayPointer;
+    border-bottom: 7px solid #00779F;
+}
+
+.insertLinkOverlayPointer {
+    composes : overlayPointer;
+    border-bottom: 7px solid #00779F;
+    left : 0;
+}
+
+.linkOverlaySeperator {
+    border-right: 1px solid rgba(10,13,25,0.1);
+    box-shadow: 1px 0 0 rgba(255,255,255,0.15);
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+
+.editorFontIcon {
+    margin-top: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.grow {
+    flex-grow:1;
+}
+
+.elementOverlay {
+    position: absolute;
+    opacity : 0;
+    transition: opacity 100ms ease-in-out;
+    display : none;
+}
+
+
+.elementOverlay.active {
+    background-color: rgba(0,153,183,0.05);
+    pointer-events: none;
+    box-shadow: inset 0 0 0 1px rgba(0,125,153,0.5),0 0 4px rgba(0,153,183,0.35);
+    opacity : 1;
+    display : block;
+}
+
+.elementOverlayOptionsWrap {
+    position: absolute;
+    top: -34px;     
+    pointer-events: visible;
+}
+
+.elementOverlay.selected .elementOverlayOptionsWrap {
+    display : none;
+}
+
+.textOptionsWrap {
+    position: absolute;
+    pointer-events: visible;
+    margin-top: -42px;
+    visibility : hidden;
+    overflow : hidden;
+    opacity : 0;
+}
+
+.elementOverlay.selected .textOptionsWrap {
+    visibility : visible;
+    opacity : 1;
+}
+
+.insertLinkWrap {
+    pointer-events: visible;
+    background: #f3f3f6;
+    visibility : hidden;
+    padding : 5px 10px;
+    position: absolute;
+    z-index : 1;
+    display : flex;
+    margin-top : 30px;
+}
+
+.insertLinkWrap.active {
+    visibility : visible;
+}
+
+.elementOverlay.insertLinkActive.active {
+    background-color:transparent;
+    box-shadow:none;
+}
+
+.optionsList {
+    display : flex;
+    margin : 0;
+}
+
+.optionsListItem {
+    height : 32px;
+    background-color: #f3f3f6;
+    color: #3b3d47;
+    cursor: pointer;
+    width : 38px;
+}
+
+.optionsFontIcon {
+    left : 50%;
+    transform : translateX(-52%);
+    top : 5px;
+}
+
+.moveOption {
+    background:#0099b7;
+}
+
+
+.textOptionsList {
+    display : flex;
+    margin : 0;
+    border : 1px solid #ccc;
+    border-radius:3px;
+}
+
+.textOptionsListItem {
+    height : 32px;
+    background-color: #f3f3f6;
+    color: #3b3d47;
+    cursor: pointer;
+    width : 38px;
+    border-right: 1px solid #ccc;
+}
+
+.textOptionsListItem:last-child {
+    border-right: none;
+}
+
+.textOptionsListItem.selected > .textOptionsFontIcon {
+    color: #039BE5 !important;
+}
+
+.linkValue {
+    margin-left : 20px;
+}
+
+.linkSelector > :global(.Select-control) {
+    width : 130px;
+    border : 1px solid #b3b3b3;
+}
+
+.linkValSelector {
+    margin-left: 15px;
+}
+
+.insertLinkPageName > :global(.Select-control) {
+    width : 180px;
+    border : 1px solid #b3b3b3;
+}
+
+.insertLinkURL {
+    padding-left : 10px;
+}
+
+.btn {
+    display : flex;
+    align-items : center;
+    cursor: pointer;
+    padding : 0 8px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.cancelBtn {
+    color: rgba(0,0,0,0.65);
+}
+
+.primaryBtn {
+    color: rgb(0, 188, 212);
+}
+
+.actionableOverlay {}

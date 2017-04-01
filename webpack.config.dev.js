@@ -2,25 +2,28 @@ var path = require('path');
 var webpack = require('webpack');
 var autoprefixer = require('autoprefixer');
 
+var reactDomLibPath = path.join(__dirname, "./node_modules/react-dom/lib");
+var alias = {};
+["EventPluginHub", "EventConstants", "EventPluginUtils", "EventPropagators",
+ "SyntheticUIEvent", "CSSPropertyOperations", "ViewportMetrics"].forEach(function(filename){
+    alias["react/lib/"+filename] = path.join(__dirname, "./node_modules/react-dom/lib", filename);
+});
+
 module.exports = {
     devtool: 'eval-source-map',
     entry: [
-        'react-hot-loader/patch',
-        'webpack-dev-server/client?http://localhost:3001',
-        'webpack/hot/only-dev-server',
         '../src/app/index'
     ],
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'bundle.js',
-        publicPath: '/'
+        publicPath: '/static/'
     },
     plugins: [
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('development'), // Tells React to build in either dev or prod modes. https://facebook.github.io/react/downloads.html (See bottom)
             __DEV__: true
         }),
-        new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin()
     ],
     module: {
@@ -55,6 +58,7 @@ module.exports = {
         return [autoprefixer];
     },
     resolve : {
-        extensions : ['','.js','.jsx']
+        extensions : ['','.js','.jsx'],
+        alias: alias
     }
 };

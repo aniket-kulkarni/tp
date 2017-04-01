@@ -1,0 +1,123 @@
+@import "../../../styles/config.css";
+
+.root {
+    display : flex;
+    flex-grow : 1;
+}
+.meta {
+    width : 250px;
+    flex-shrink: 0;
+    background-color : var(--darkGrey);
+    box-sizing : border-box;
+    padding : 60px 40px;
+    text-transform : capitalize;
+}
+
+.main {
+    flex-grow : 1;
+    background-color : var(--lightGrey);
+}
+
+.cover {
+    margin-top : 15px;
+}
+
+.cover > img {
+    width:100%;
+}
+
+table {
+    width : 100%;
+}
+
+.buildsContainer {
+    max-width : 960px;
+}
+
+.heading {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.exportTable .export-success {
+    background: white;
+    border-left: 5px solid #0099b7;
+}
+
+.exportTable {
+    border-collapse : collapse;
+}
+
+.exportTable tr {
+    border-bottom: 1px solid #e7e7eb;
+    background: rgba(255,255,255,0.7);
+    border-left: 5px solid #CAEDF7;
+}
+
+.exportTable tr td {
+    padding: 15px;
+    font-size: 14px;
+}
+
+.buildItemName {
+    color: #3b3d47;
+    vertical-align: text-top;
+    font-weight: 600;
+    width: 12%;
+}
+
+.buildItemMeta {
+    width: 19%;
+    vertical-align: text-top;
+    line-height: 1.4em;
+}
+
+
+.buildItemActions {
+    vertical-align: top;
+    text-align: right;
+}
+
+.exportList {
+    margin-top:20px;
+}
+
+.downloadLink {
+    color: #0099b7;
+    cursor : pointer;
+}
+
+.noExports {
+    height: 60px;
+    background: white;
+    font-style: italic;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+
+.exportsContainer {
+    margin : 40px 60px;
+}
+
+:global(.web-export-auth-build-overlay) {
+    opacity : 0.9 !important;
+}
+
+.pin {
+    outline : none;
+    width : 50px;
+    margin-left: 25px;
+}
+
+.pinError {
+    margin-left: 10px;
+    color: red;
+    font-size: 12px;
+}
+
+.pinError:before {
+    content : "*";
+}

@@ -1,0 +1,37 @@
+:root {
+
+    /* Theme Vars */
+    --gradientBackground : #3CA55C;
+    --gradientBackgroundWebkit : -webkit-linear-gradient(to left, #3CA55C , #B5AC49);
+    --gradientBackgroundLinear : linear-gradient(to left, #3CA55C , #B5AC49);
+
+    --lightGrey :rgb(242, 242, 246);
+    --darkGrey : rgb(230, 230, 235);
+
+    /**Dashboard Vars **/
+    --dashboardWrapWidth : 62.5%;
+
+    /**Project Vars **/
+    --navbarHeight : 40px;
+
+    --tableOfContentsWidth : 250px;
+    --contentEditorWidth : 530px;
+    --codeEditorWidth : 540px;
+    --patternsWidth : 280px;
+    --headerHeight : 40px;
+
+
+    /** Editor Vars */
+
+    --editorBackground : #1B2B34;
+    --editorLineMarker : #343D46;
+    --editorAttribute : #d6bb6d;
+    --editorTagColor : #EC5f67;
+    --editorMainFontSize : 16px;
+    --editorLineFontSize : 12px;
+
+    /** Tree Vars **/
+
+    --arrowLen : 8px;
+    
+}

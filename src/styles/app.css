@@ -6,7 +6,22 @@ html,body {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: lightcoral;
+}
+
+ul {
+    padding : 0;
+}
+
+.center {
+    position: fixed;
+}
+
+#app {
+    height : 100%;
+}
+
+.root-wrap {
+    height : 100%;
 }
 
 .hide {
@@ -20,8 +35,21 @@ input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
 }
 
+.dialog-error {
+    color : #f44336;
+}
+
 ul {
     list-style : none;
+}
+
+.tp-loading-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.2);
 }
 
 a {
